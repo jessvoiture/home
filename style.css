@@ -1,0 +1,49 @@
+html {
+    background-color: #0b8525;
+}
+
+.wrapper {
+    margin-left: 25%; margin-right: 25%;
+    margin-top: 8%;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #bcd6c2;
+    font-size: 22px;
+}
+
+.hello {
+    font-size: 120px;
+    padding-bottom: 15%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail {
+    padding-bottom: 2%;
+}
+
+a:link {
+    color: white;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #bcd6c2;
+    text-decoration: underline;
+}
+
+a:visited {
+    text-decoration: underline;
+    color: white;
+}
+
+img {
+    position: fixed;
+    display: none;
+    pointer-events: none;
+    width: 450px;
+    height: auto;
+    z-index: 1;
+  }
+  
