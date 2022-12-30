@@ -1,12 +1,18 @@
 let attached = false;
 
+var imgHeight;
+
 const getElmtImage = (elmt) => {
   return elmt.querySelector("img")
 }
 
-const followMouse = (elmt, event) => {
+const getImageHeight = (elmt) => {
+  return elmt.querySelector("img").height;
+}
+
+const followMouse = (elmt, event, height) => {
   elmt.style.left = event.x + "px";
-  elmt.style.top = event.y + "px";
+  elmt.style.top = (event.y - height) + "px";
 }
 
 function showImage(elmt) {
@@ -14,8 +20,9 @@ function showImage(elmt) {
   if (!attached) {
     attached = true;
     image.style.display = "block";
+    height = image.height;
     document.addEventListener("pointermove", function(event) {
-      followMouse(image, event)
+      followMouse(image, event, height)
     });
   }
 }
