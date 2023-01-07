@@ -30,32 +30,53 @@ body {
         z-index: 99;
     }
 
+    .sidepanel, .sp-clicker {
+        top: 0; 
+    }
+
     /* move click part of side panel with sidepanel */
     .move-clicker{
         margin-right: calc(5/12 * 100%);
     }
 
-    .sp-clicker{
-    /* .sp-clicker, .label-wrapper { */
+    .sp-clicker, .label-wrapper {
         writing-mode: vertical-rl;
         width: 36px;
         height: 100vh;
         display: flex;
         align-items: center;
         text-align: center;
+        z-index: 999;
+    }
+
+    .sp-clicker {
+        display: flex;
+        justify-content: space-between;
     }
 
     .label {
         margin-top: 15px;
         font-size: 18px;
     }
-/* 
+
+    i {
+        margin-bottom: 15px;
+        transition: all 1s;
+    }
+
+    .rotate-i {
+        -moz-transform:rotate(180deg);
+        -webkit-transform:rotate(180deg);
+        transform:rotate(180deg);
+        transition: all 1s;
+    }
+
     #work-label {
         float: left;
         border-width: 0 0.5px 0 0; 
         border-style: solid;
         border-color: black;
-    } */
+    }
 
     /* SIDEPANEL CONTENTS */
     .sp-content {
@@ -135,27 +156,30 @@ body {
         width: 100%;
         /* sidepanel should overlap with sp-clicker */
         height: calc(100vh - 40px);
-        margin-top: calc(-100vh + 40px);
+        margin-bottom: calc(-100vh + 2 * 40px);
         float: none;
         }
     
     /* side panel is fully visible on click*/
     .show-sp {
-        margin-top: 0vh;
+        margin-bottom: 0vh;
     }
 
     /* what the user will click to open sidepanel */
     .sp-clicker {
-        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .sidepanel, .sp-clicker {
+        bottom: 0; 
     }
 
     /* move clicker with sidepanel */
     .move-clicker{
-        margin-top: calc(100vh - 40px)
+        margin-bottom: calc(100vh - 2 * 40px)
     }
 
-    .sp-clicker {
-    /* .sp-clicker, .label-wrapper { */
+    .sp-clicker, .label-wrapper { 
         width: 100%;
         height: 40px;
         display: flex;
@@ -164,13 +188,13 @@ body {
         justify-content: center;
     }
 
-    /* #work-label {
-        bottom: 0;
-        border-width: 0.5px 0 0 0;
+    #work-label {
+        top: 0;
+        border-width: 0 0 0.5px 0;
         border-style: solid;
         border-color: black;
         z-index: 2;
-    } */
+    }
 
     /* SIDEPANEL CONTENTS */
     .sp-content {
@@ -240,10 +264,13 @@ body {
         margin-right: 5%;
     }
 
+    .fas {
+        display: none;
+    }
+
 }
 
 .sidepanel, .sp-clicker {
-    top: 0; 
     right: 0;
     position: fixed;
     color: white;
@@ -261,11 +288,11 @@ body {
     opacity: 100%;
 }
 
-/* #work-label{
+#work-label{
     position: fixed;
     background-color: white;
     color: black;
-} */
+}
 
 img {
     width: 100%;

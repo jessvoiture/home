@@ -4,8 +4,31 @@ $('.sp-clicker').click(function(e) {
   // show side panel
   $('.sidepanel').toggleClass("show-sp"); 
   $('.sp-clicker').toggleClass("move-clicker"); 
+
+  // rotate arrow
+  $('i').toggleClass("rotate-i"); 
+
   // stop scrolling when side panel is visible
   $('body').toggleClass("no-scroll"); 
+
+
+
+  e.preventDefault();
+
+});
+
+$('.label-wrapper').click(function(e) {
+
+  // hide side panel
+  $('.sidepanel').removeClass("show-sp"); 
+  $('.sp-clicker').removeClass("move-clicker"); 
+
+  // stop scrolling when side panel is visible
+  $('body').removeClass("no-scroll"); 
+
+  // rotate arrow
+  $('i').removeClass("rotate-i"); 
+
   e.preventDefault();
 
 });
