@@ -54,6 +54,10 @@ body {
         justify-content: space-between;
     }
 
+    .sp-clicker:hover, .label-wrapper:hover {
+        cursor: pointer;
+    }
+
     .label {
         margin-top: 15px;
         font-size: 18px;
