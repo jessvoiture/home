@@ -35,7 +35,8 @@ body {
         margin-right: calc(5/12 * 100%);
     }
 
-    .sp-clicker, .label-wrapper {
+    .sp-clicker{
+    /* .sp-clicker, .label-wrapper { */
         writing-mode: vertical-rl;
         width: 36px;
         height: 100vh;
@@ -48,13 +49,13 @@ body {
         margin-top: 15px;
         font-size: 18px;
     }
-
+/* 
     #work-label {
         float: left;
-        border-width: 0 0.5px 0 0; /* top right bottom left */
+        border-width: 0 0.5px 0 0; 
         border-style: solid;
         border-color: black;
-    }
+    } */
 
     /* SIDEPANEL CONTENTS */
     .sp-content {
@@ -134,7 +135,7 @@ body {
         width: 100%;
         /* sidepanel should overlap with sp-clicker */
         height: calc(100vh - 40px);
-        margin-top: calc(-100vh + 2 * 40px);
+        margin-top: calc(-100vh + 40px);
         float: none;
         }
     
@@ -150,10 +151,11 @@ body {
 
     /* move clicker with sidepanel */
     .move-clicker{
-        margin-top: calc(100vh - 2 * 40px)
+        margin-top: calc(100vh - 40px)
     }
 
-    .sp-clicker, .label-wrapper {
+    .sp-clicker {
+    /* .sp-clicker, .label-wrapper { */
         width: 100%;
         height: 40px;
         display: flex;
@@ -162,13 +164,13 @@ body {
         justify-content: center;
     }
 
-    #work-label {
+    /* #work-label {
         bottom: 0;
-        border-width: 0.5px 0 0 0; /* top right bottom left */
+        border-width: 0.5px 0 0 0;
         border-style: solid;
         border-color: black;
         z-index: 2;
-    }
+    } */
 
     /* SIDEPANEL CONTENTS */
     .sp-content {
@@ -259,11 +261,11 @@ body {
     opacity: 100%;
 }
 
-#work-label{
+/* #work-label{
     position: fixed;
     background-color: white;
     color: black;
-}
+} */
 
 img {
     width: 100%;
